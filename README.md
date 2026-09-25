@@ -12,25 +12,6 @@ npm start
 
 Abra <http://localhost:8000>. Para encerrar, pressione `Ctrl+C`. No Windows, também pode dar dois cliques em `iniciar.bat`. Não é necessário executar `npm install`.
 
-## Publicar com GitHub Pages
-
-Os arquivos estáticos ficam todos na raiz, então não há etapa de build. Crie um repositório vazio no GitHub e envie estes arquivos para a branch `main`. Por exemplo, depois de criar o repositório `pxg-adventurer-skill`:
-
-```sh
-git init
-git add .
-git commit -m "Publica calculadora Adventurer"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/pxg-adventurer-skill.git
-git push -u origin main
-```
-
-No repositório, abra **Settings → Pages**. Em **Build and deployment**, escolha **Deploy from a branch**, selecione `main` e `/(root)`, depois clique em **Save**. Os caminhos relativos `./styles.css` e `./app.js` permitem que o projeto funcione também no endereço de projeto do Pages.
-
-A URL de um projeto costuma ser `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`. Se o repositório for chamado `SEU-USUARIO.github.io`, a URL será `https://SEU-USUARIO.github.io/`. A publicação pode levar alguns minutos.
-
-O conteúdo publicado pelo GitHub Pages é público.
-
 ## Dados
 
 As estimativas usam medições empíricas publicadas em 2020, não dados oficiais do jogo. Confira o avanço depois de um lote pequeno, pois a progressão pode ter mudado.
@@ -42,14 +23,6 @@ Finder E e Lockpick mantêm interpolação linear entre checkpoints históricos 
 Para reproduzir o ajuste histórico, execute `python analysis/compare_models.py` (Python e Node, sem dependências externas). Os parâmetros atuais estão em `analysis/model-comparison.json`, na família `discrete_exponential`; os coeficientes do navegador ficam em `progressionModels`, no `app.js`. `fit_progression.py` e `progression-fit.json` preservam a comparação com o modelo contínuo anterior. O ajuste minimiza o erro quadrático em receitas e a validação omite um checkpoint intermediário por vez. Isso avalia a base histórica, não confirma as regras atuais do jogo.
 
 Execute `npm test` para validar o cálculo e os quatro idiomas.
-
-### Rank S
-
-A [pesquisa de fontes da wiki sobre Rank S](analysis/rank-s-web-research.md) confirma que ele começa no skill 100 e inclui crafts desbloqueados até pelo menos o skill 120. Esses requisitos de skill não medem XP por craft. A calculadora permanece limitada a 100 até haver medições de lotes de Rank S suficientes para ajustar essa faixa.
-
-### Investigação dos lotes atuais
-
-Execute `python analysis/analyze_personal.py` para comparar oito famílias de modelos históricos e cinco ajustes diretos aos lotes pessoais, incluindo o Adventurer Badge de +20% confirmado pelo usuário. O script gera [o relatório dos lotes atuais](analysis/personal-analysis.md) e `analysis/personal-analysis.json`, além de atualizar `model-comparison.json`. Não altera os registros nem o aplicativo. Os últimos três lotes foram corrigidos para 4, 8 e 9 receitas após confirmação do usuário; as porcentagens foram preservadas. O modelo pessoal inclui o bônus já presente nas medições, sem aplicar +20% novamente.
 
 ## Registrar seus próprios lotes
 
