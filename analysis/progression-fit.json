@@ -1,0 +1,281 @@
+{
+  "model": "n = A * expm1(k * (skill - initial_skill))",
+  "recipes": {
+    "D": {
+      "checkpoints": 4,
+      "initial_skill": 25.4881,
+      "A": 4.151514305380064,
+      "k": 0.17857312482377996,
+      "doubling_skill_interval": 3.88158733988644,
+      "training_rmse_recipes": 0.046498190676396566,
+      "validation_linear_mae_recipes": 8.598078481805842,
+      "validation_logarithmic_mae_recipes": 0.1469657451598998,
+      "residuals": [
+        {
+          "skill": 25.4881,
+          "actual_recipes": 0,
+          "predicted_recipes": 0.0
+        },
+        {
+          "skill": 33.0776,
+          "actual_recipes": 12,
+          "predicted_recipes": 11.947433101494232
+        },
+        {
+          "skill": 38.9834,
+          "actual_recipes": 42,
+          "predicted_recipes": 42.066565161156575
+        },
+        {
+          "skill": 40.5478,
+          "actual_recipes": 57,
+          "predicted_recipes": 56.961866976957005
+        }
+      ],
+      "held_out": [
+        {
+          "skill": 33.0776,
+          "actual_recipes": 12,
+          "linear_error": 11.62000103739819,
+          "logarithmic_error": -0.16405908919402634
+        },
+        {
+          "skill": 38.9834,
+          "actual_recipes": 42,
+          "linear_error": 5.576155926213495,
+          "logarithmic_error": 0.12987240112577325
+        }
+      ]
+    },
+    "C": {
+      "checkpoints": 6,
+      "initial_skill": 40.5478,
+      "A": 1.8733686939932084,
+      "k": 0.1775415969147181,
+      "doubling_skill_interval": 3.904139607873966,
+      "training_rmse_recipes": 0.03416801690718932,
+      "validation_linear_mae_recipes": 3.020522937307698,
+      "validation_logarithmic_mae_recipes": 0.048797669246505304,
+      "residuals": [
+        {
+          "skill": 40.5478,
+          "actual_recipes": 0,
+          "predicted_recipes": 0.0
+        },
+        {
+          "skill": 52.2108,
+          "actual_recipes": 13,
+          "predicted_recipes": 12.982662082060786
+        },
+        {
+          "skill": 54.3789,
+          "actual_recipes": 20,
+          "predicted_recipes": 19.957693609816452
+        },
+        {
+          "skill": 58.0561,
+          "actual_recipes": 40,
+          "predicted_recipes": 40.06452457199658
+        },
+        {
+          "skill": 59.7724,
+          "actual_recipes": 55,
+          "predicted_recipes": 55.00439308837935
+        },
+        {
+          "skill": 60.682,
+          "actual_recipes": 65,
+          "predicted_recipes": 64.9729525119366
+        }
+      ],
+      "held_out": [
+        {
+          "skill": 52.2108,
+          "actual_recipes": 13,
+          "linear_error": 3.8648914403048167,
+          "logarithmic_error": -0.02537219944252378
+        },
+        {
+          "skill": 54.3789,
+          "actual_recipes": 20,
+          "linear_error": 3.014661351855345,
+          "logarithmic_error": -0.07126584481266107
+        },
+        {
+          "skill": 58.0561,
+          "actual_recipes": 40,
+          "linear_error": 3.8624269954575112,
+          "logarithmic_error": 0.09202493809291923
+        },
+        {
+          "skill": 59.7724,
+          "actual_recipes": 55,
+          "linear_error": 1.3401119616131183,
+          "logarithmic_error": 0.006527694637917136
+        }
+      ]
+    },
+    "B": {
+      "checkpoints": 8,
+      "initial_skill": 60.682,
+      "A": 4.246500368499708,
+      "k": 0.17678076392119368,
+      "doubling_skill_interval": 3.920942330970695,
+      "training_rmse_recipes": 0.042441766914646975,
+      "validation_linear_mae_recipes": 2.3661561087882483,
+      "validation_logarithmic_mae_recipes": 0.04419259222748728,
+      "residuals": [
+        {
+          "skill": 60.682,
+          "actual_recipes": 0,
+          "predicted_recipes": 0.0
+        },
+        {
+          "skill": 71.4019,
+          "actual_recipes": 24,
+          "predicted_recipes": 24.005586100475888
+        },
+        {
+          "skill": 72.8183,
+          "actual_recipes": 32,
+          "predicted_recipes": 32.04412981162434
+        },
+        {
+          "skill": 73.6765,
+          "actual_recipes": 38,
+          "predicted_recipes": 37.98949540134904
+        },
+        {
+          "skill": 75.0981,
+          "actual_recipes": 50,
+          "predicted_recipes": 50.05676559450669
+        },
+        {
+          "skill": 76.2995,
+          "actual_recipes": 63,
+          "predicted_recipes": 62.906176188837684
+        },
+        {
+          "skill": 77.9083,
+          "actual_recipes": 85,
+          "predicted_recipes": 84.99745349608524
+        },
+        {
+          "skill": 80.004,
+          "actual_recipes": 125,
+          "predicted_recipes": 125.01702093717883
+        }
+      ],
+      "held_out": [
+        {
+          "skill": 71.4019,
+          "actual_recipes": 24,
+          "linear_error": 4.265352702223915,
+          "logarithmic_error": 0.006602810366654666
+        },
+        {
+          "skill": 72.8183,
+          "actual_recipes": 32,
+          "linear_error": 0.7178404994284193,
+          "logarithmic_error": 0.05426638505603165
+        },
+        {
+          "skill": 73.6765,
+          "actual_recipes": 38,
+          "linear_error": 0.7758575313624618,
+          "logarithmic_error": -0.013126277640921558
+        },
+        {
+          "skill": 75.0981,
+          "actual_recipes": 50,
+          "linear_error": 1.5493709492947332,
+          "logarithmic_error": 0.07132009613070522
+        },
+        {
+          "skill": 76.2995,
+          "actual_recipes": 63,
+          "linear_error": 1.9629919578677004,
+          "logarithmic_error": -0.11655627155475656
+        },
+        {
+          "skill": 77.9083,
+          "actual_recipes": 85,
+          "linear_error": 4.9255230125522615,
+          "logarithmic_error": -0.0032837126158540286
+        }
+      ]
+    },
+    "A": {
+      "checkpoints": 6,
+      "initial_skill": 80.004,
+      "A": 6.929379278502318,
+      "k": 0.1767131424618002,
+      "doubling_skill_interval": 3.9224427278224754,
+      "training_rmse_recipes": 0.14180913051045257,
+      "validation_linear_mae_recipes": 7.690526346655851,
+      "validation_logarithmic_mae_recipes": 0.17336022613776692,
+      "residuals": [
+        {
+          "skill": 80.004,
+          "actual_recipes": 0,
+          "predicted_recipes": 0.0
+        },
+        {
+          "skill": 95.4357,
+          "actual_recipes": 99,
+          "predicted_recipes": 98.99807217252237
+        },
+        {
+          "skill": 96.8103,
+          "actual_recipes": 128,
+          "predicted_recipes": 128.1232197710085
+        },
+        {
+          "skill": 98.7051,
+          "actual_recipes": 182,
+          "predicted_recipes": 181.83515490868783
+        },
+        {
+          "skill": 99.7926,
+          "actual_recipes": 222,
+          "predicted_recipes": 221.83119510676698
+        },
+        {
+          "skill": 100.044,
+          "actual_recipes": 232,
+          "predicted_recipes": 232.22316619901204
+        }
+      ],
+      "held_out": [
+        {
+          "skill": 95.4357,
+          "actual_recipes": 99,
+          "linear_error": 18.530783099194934,
+          "logarithmic_error": -0.003842618706897838
+        },
+        {
+          "skill": 96.8103,
+          "actual_recipes": 128,
+          "linear_error": 5.896861809506305,
+          "logarithmic_error": 0.2030670516165003
+        },
+        {
+          "skill": 98.7051,
+          "actual_recipes": 182,
+          "linear_error": 5.722764309425827,
+          "logarithmic_error": -0.2117820394237242
+        },
+        {
+          "skill": 99.7926,
+          "actual_recipes": 222,
+          "linear_error": 0.6116961684963371,
+          "logarithmic_error": -0.27474919480394533
+        }
+      ]
+    }
+  },
+  "example_finder_b_73_4215_to_80": {
+    "raw_recipes": 88.79783632499584,
+    "rounded_recipes": 89
+  }
+}

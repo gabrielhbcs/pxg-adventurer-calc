@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c1220">
+  <meta name="description" content="Estime quantos crafts de Adventurer faltam para o próximo rank no PokeXGames.">
+  <title>Adventurer · Calculadora de Skill PXG</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">A</div><span>Adventurer<span style="color:#ffb14f">.</span></span>
+      </div>
+      <div class="top-note" data-i18n="tagline">PXG · estimador de profissão</div>
+      <div class="language-picker" role="group" aria-labelledby="language-label"><span id="language-label"
+          class="sr-only" data-i18n="language">Idioma</span><button type="button" class="language-button"
+          data-language="pt-BR" lang="pt-BR" aria-label="Português" title="Português" aria-pressed="true"><img
+            src="./flags/br.svg" alt="" width="30" height="20"></button><button type="button" class="language-button"
+          data-language="en" lang="en" aria-label="English" title="English" aria-pressed="false"><img
+            src="./flags/gb.svg" alt="" width="30" height="20"></button><button type="button" class="language-button"
+          data-language="es" lang="es" aria-label="Español" title="Español" aria-pressed="false"><img
+            src="./flags/mx.svg" alt="" width="30" height="20"></button><button type="button" class="language-button"
+          data-language="pl" lang="pl" aria-label="Polski" title="Polski" aria-pressed="false"><img src="./flags/pl.svg"
+            alt="" width="30" height="20"></button></div>
+    </header>
+    <div class="heading">
+      <div>
+        <div class="eyebrow" data-i18n="eyebrow">Calculadora de progressão</div>
+        <h1 data-i18n="heading">Quanto falta para o próximo rank?</h1>
+        <p data-i18n="intro">Use seu skill atual e a porcentagem da barra. Não precisa lembrar quantos lotes já fez.</p>
+      </div><span class="source-pill" data-i18n="data">Estimativas com dados empíricos</span>
+    </div>
+    <div class="layout">
+      <section class="panel control" aria-labelledby="inputs-title">
+        <h2 class="panel-title" id="inputs-title" data-i18n="yourProgress">Seu progresso</h2>
+        <div class="fields">
+          <div class="group"><label data-i18n="skill" for="skill">Skill atual</label><input class="field" id="skill"
+              type="number" min="0" max="100" step="1" value="78" inputmode="numeric"></div>
+          <div class="group"><label data-i18n="progress" for="progress">Progresso no skill</label>
+            <div class="inputwrap"><input class="field" id="progress" type="text" inputmode="decimal" value="43,04"
+                aria-describedby="percent-help"><span>%</span></div><small id="percent-help" class="sr-only"
+              data-i18n="percentHelp"></small>
+          </div>
+        </div>
+        <div class="group"><label data-i18n="recipe" for="recipe">O que pretende craftar?</label><select class="field"
+            id="recipe">
+            <option value="lock">Lockpick</option>
+            <option value="e">Item Finder E</option>
+            <option value="d">Item Finder D</option>
+            <option value="c">Item Finder C</option>
+            <option value="b" selected>Item Finder B</option>
+            <option value="a">Item Finder A</option>
+          </select><small id="recipe-help"></small></div>
+        <div class="divider"></div>
+        <div class="group"><label data-i18n="target" for="target">Meta</label><select class="field" id="target">
+            <option value="20">Rank D · skill 20</option>
+            <option value="40">Rank C · skill 40</option>
+            <option value="60">Rank B · skill 60</option>
+            <option value="80" selected>Rank A · skill 80</option>
+            <option value="100">Skill 100</option>
+          </select></div>
+        <div class="group"><label for="price"><span data-i18n="price">Custo por execução</span> <span
+              style="font-weight:400;color:#8192a8" data-i18n="optional">(opcional)</span></label>
+          <div class="inputwrap"><input class="field" id="price" type="text" inputmode="decimal"
+              placeholder="Ex.: 25.000"><span>$</span></div><small data-i18n="priceHelp">Insira o custo dos materiais de
+            uma receita no seu servidor.</small>
+        </div>
+        <div class="range-note" id="range-note">Preencha os campos para ver a estimativa.</div>
+      </section>
+      <section class="panel result" aria-live="polite" aria-label="Resultado da estimativa" id="result"></section>
+    </div>
+    <div class="lower">
+      <section class="panel info">
+        <h2 data-i18n="coverageTitle">Onde há medições</h2>
+        <div class="coverage"><span class="chip">Finder D · 25–40</span><span class="chip">Finder C · 40–60</span><span
+            class="chip">Finder B · 60–80</span><span class="chip">Finder A · 80–100</span><span
+            class="chip weak">Finder E · 20–23</span><span class="chip weak" data-i18n="lockCoverage">Lockpick · 0–20 e
+            23–25</span></div>
+      </section>
+      <section class="panel info">
+        <h2 data-i18n="aboutTitle">Sobre os números</h2>
+        <p data-i18n="about">Base histórica: Finders A–D usam uma curva logarítmica ajustada às medições de 2020. Finder E e Lockpick usam interpolação linear por falta de dados suficientes. A PXG pode ter mudado o ganho de skill; confirme com um lote pequeno antes de comprar todos os materiais.</p><a
+          href="https://torg.pl/inne-gry/471218-pokemony-online-little-talks-nowy-temat-848.html" target="_blank"
+          rel="noopener noreferrer" data-i18n="original">Ver registro original ↗</a>
+      </section>
+    </div>
+    <p class="bottom" data-i18n="footer">Ferramenta independente, sem vínculo com PokeXGames. Tempo é o tempo sequencial
+      das receitas, não tempo ativo de jogo. Valores de custo dependem do seu servidor.</p>
+  </main>
+
+  <script src="./i18n.js" defer></script>
+  <script src="./batches.js" defer></script>
+  <script src="./progression.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+
+</html>

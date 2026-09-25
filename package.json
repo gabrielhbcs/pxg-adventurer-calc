@@ -1,0 +1,13 @@
+{
+  "name": "pxg-adventurer-calculadora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calculadora local de progresso para a profissão Adventurer no PokeXGames",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test app.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

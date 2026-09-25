@@ -1,0 +1,468 @@
+{
+  "bonus_assumption": "User confirmed Adventurer Badge +20%; historical bonus is unknown.",
+  "objective": "Squared error in per-batch recipe counts, before rounding.",
+  "historical_q": 1.1940179952811159,
+  "historical_cost_at_75": 10.321963224520232,
+  "diagnostics": [
+    {
+      "batch": {
+        "date": "2026-09-23",
+        "crafts": 4,
+        "before": [
+          74,
+          42.23
+        ],
+        "after": [
+          75,
+          26.02
+        ]
+      },
+      "skill_gain": 0.8378999999999905,
+      "historical_recipes": 7.679835371457287,
+      "conditional_bonus_20_recipes": 6.39986280954774,
+      "required_multiplier": 1.9199588428643217,
+      "recipes_at_first_batch_rate": 4.0,
+      "nearest_integer_hypothesis": 4,
+      "integer_residual": 0.0
+    },
+    {
+      "batch": {
+        "date": "2026-09-23",
+        "crafts": 1,
+        "before": [
+          75,
+          26.02
+        ],
+        "after": [
+          75,
+          44.62
+        ]
+      },
+      "skill_gain": 0.18600000000000705,
+      "historical_recipes": 1.9198851597608453,
+      "conditional_bonus_20_recipes": 1.5999042998007045,
+      "required_multiplier": 1.9198851597608453,
+      "recipes_at_first_batch_rate": 0.9999616225609469,
+      "nearest_integer_hypothesis": 1,
+      "integer_residual": -3.837743905310553e-05
+    },
+    {
+      "batch": {
+        "date": "2026-09-24",
+        "crafts": 4,
+        "before": [
+          75,
+          44.62
+        ],
+        "after": [
+          76,
+          16.93
+        ]
+      },
+      "skill_gain": 0.7231000000000023,
+      "historical_recipes": 7.802859679093835,
+      "conditional_bonus_20_recipes": 6.50238306591153,
+      "required_multiplier": 1.9507149197734588,
+      "recipes_at_first_batch_rate": 4.06407653377247,
+      "nearest_integer_hypothesis": 4,
+      "integer_residual": 0.0640765337724698
+    },
+    {
+      "batch": {
+        "date": "2026-09-24",
+        "crafts": 8,
+        "before": [
+          76,
+          16.93
+        ],
+        "after": [
+          77,
+          33.97
+        ]
+      },
+      "skill_gain": 1.1703999999999866,
+      "historical_recipes": 15.237012665721366,
+      "conditional_bonus_20_recipes": 12.697510554767806,
+      "required_multiplier": 1.9046265832151708,
+      "recipes_at_first_batch_rate": 7.9361142153390025,
+      "nearest_integer_hypothesis": 8,
+      "integer_residual": -0.06388578466099748
+    },
+    {
+      "batch": {
+        "date": "2026-09-24",
+        "crafts": 9,
+        "before": [
+          77,
+          33.97
+        ],
+        "after": [
+          78,
+          43.04
+        ]
+      },
+      "skill_gain": 1.0907000000000124,
+      "historical_recipes": 17.279377981295923,
+      "conditional_bonus_20_recipes": 14.399481651079936,
+      "required_multiplier": 1.9199308868106582,
+      "recipes_at_first_batch_rate": 8.999868953189331,
+      "nearest_integer_hypothesis": 9,
+      "integer_residual": -0.00013104681066877788
+    }
+  ],
+  "historical_candidates": {
+    "linear": {
+      "historical_held_out_mae": 16.681834526612963,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        0.6711160336684093,
+        2.6090537846538218,
+        4.222979601104674,
+        3.9354099888285887
+      ],
+      "best_constant_multiplier": 0.6063300512929114,
+      "best_constant_predictions": [
+        1.3282192407993325,
+        5.163630822698741,
+        8.357783867911106,
+        7.7886490641924695
+      ],
+      "best_constant_rmse": 0.8742346577699619
+    },
+    "power2": {
+      "historical_held_out_mae": 15.814532561268996,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        0.7426459060549936,
+        2.904551727843193,
+        4.759981962631663,
+        4.501181893006544
+      ],
+      "best_constant_multiplier": 0.6848410224120433,
+      "best_constant_predictions": [
+        1.3012875369632946,
+        5.089446980170471,
+        8.34059025120915,
+        7.887112621530462
+      ],
+      "best_constant_rmse": 0.8112011062164979
+    },
+    "power3": {
+      "historical_held_out_mae": 14.854265424974573,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        0.8173579145416869,
+        3.21606320573619,
+        5.3363724019010785,
+        5.12054661445795
+      ],
+      "best_constant_multiplier": 0.7695834678556074,
+      "best_constant_predictions": [
+        1.274493980728354,
+        5.01475929263013,
+        8.320925734182708,
+        7.984391809339683
+      ],
+      "best_constant_rmse": 0.7482540830547356
+    },
+    "power": {
+      "historical_held_out_mae": 0.35336206004127807,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        1.58470355809999,
+        6.660598768274765,
+        12.66118274055966,
+        14.241118062606251
+      ],
+      "best_constant_multiplier": 1.9092485985617769,
+      "best_constant_predictions": [
+        0.996017109114278,
+        4.1863162963432705,
+        7.957800414318326,
+        8.950820594028864
+      ],
+      "best_constant_rmse": 0.09865222337365204
+    },
+    "quadratic": {
+      "historical_held_out_mae": 3.795020080672051,
+      "historical_monotone": false,
+      "bonus_20_predictions": [
+        1.7632537358264244,
+        7.137341342163825,
+        12.504630302031442,
+        12.712766565848609
+      ],
+      "best_constant_multiplier": 1.8239450204102055,
+      "best_constant_predictions": [
+        1.160070319726985,
+        4.695760845176333,
+        8.22697844207112,
+        8.36391432214739
+      ],
+      "best_constant_rmse": 0.49138321696824133
+    },
+    "exponential": {
+      "historical_held_out_mae": 0.04419259505368286,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        1.5566733789540108,
+        6.5623144797598405,
+        12.570668380369069,
+        14.302942783079544
+      ],
+      "best_constant_multiplier": 1.9047217233470393,
+      "best_constant_predictions": [
+        0.980724917371283,
+        4.134345337267426,
+        7.919688147376918,
+        9.011044043502132
+      ],
+      "best_constant_rmse": 0.07904454918663119
+    },
+    "discrete_exponential": {
+      "historical_held_out_mae": 0.0005040939957379938,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        1.5999042998007045,
+        6.50238306591153,
+        12.697510554767806,
+        14.399481651079936
+      ],
+      "best_constant_multiplier": 1.9170172413836895,
+      "best_constant_predictions": [
+        1.001496031603287,
+        4.0703127288838505,
+        7.948291928101491,
+        9.013678963483809
+      ],
+      "best_constant_rmse": 0.04417849220804354
+    },
+    "piecewise": {
+      "historical_held_out_mae": 2.3661561087882483,
+      "historical_monotone": true,
+      "bonus_20_predictions": [
+        1.6772099217580205,
+        6.520379002275186,
+        13.027809584050262,
+        14.783876336224456
+      ],
+      "best_constant_multiplier": 1.9632731443232028,
+      "best_constant_predictions": [
+        1.0251512439464678,
+        3.9854132499874537,
+        7.962912112389532,
+        9.036262557131378
+      ],
+      "best_constant_rmse": 0.02973147660769832
+    }
+  },
+  "personal_candidates": {
+    "linear": {
+      "all": {
+        "k": 0,
+        "q": 1.0,
+        "scale": 6.705797816374185,
+        "rmse": 1.1196312626544007,
+        "boundary": false,
+        "predictions": [
+          5.618787990339866,
+          1.2472783938456455,
+          4.848962401020188,
+          7.8484657642842555,
+          7.314013678319407
+        ],
+        "leave_one_batch_out_mae": 1.1803325367436819,
+        "last_batch_forward_prediction": 6.551213197923296
+      },
+      "last_four": {
+        "k": 0,
+        "q": 1.0,
+        "scale": 7.140963660211214,
+        "rmse": 0.8742346577699674,
+        "boundary": false,
+        "predictions": [
+          1.328219240799336,
+          5.163630822698745,
+          8.35778386791111,
+          7.78864906419246
+        ],
+        "leave_one_batch_out_mae": 1.0818617866386864,
+        "last_batch_forward_prediction": 7.040944582446944
+      }
+    },
+    "continuous_increasing_cost": {
+      "all": {
+        "k": 0.18107364391346886,
+        "q": 1.1985034385268012,
+        "scale": 4.906309194112633,
+        "rmse": 0.06817426143103507,
+        "boundary": false,
+        "predictions": [
+          3.9983387759123756,
+          0.9728900893629674,
+          4.1094560538376665,
+          7.904497900198331,
+          9.037412082271324
+        ],
+        "leave_one_batch_out_mae": 0.11085862955311532,
+        "last_batch_forward_prediction": 9.22687285878285
+      },
+      "last_four": {
+        "k": 0.18125400667891567,
+        "q": 1.1987196234166375,
+        "scale": 4.904130247520306,
+        "rmse": 0.07621148582976325,
+        "boundary": false,
+        "predictions": [
+          0.9725200612079976,
+          4.108235322267686,
+          7.903517517611367,
+          9.038129527393425
+        ],
+        "leave_one_batch_out_mae": 0.23956368174097076,
+        "last_batch_forward_prediction": 9.505184229858747
+      }
+    },
+    "discrete_increasing_cost": {
+      "all": {
+        "k": 0.1785987687916349,
+        "q": 1.1955409595781832,
+        "scale": 5.373012746423412,
+        "rmse": 0.03887770344974978,
+        "boundary": false,
+        "predictions": [
+          3.9943633286095372,
+          0.9993803708347925,
+          4.063099557695451,
+          7.944941035466899,
+          9.02263138012027
+        ],
+        "leave_one_batch_out_mae": 0.06278514195827296,
+        "last_batch_forward_prediction": 9.129426253367322
+      },
+      "last_four": {
+        "k": 0.17920714255096604,
+        "q": 1.1962685166170615,
+        "scale": 5.366484920064863,
+        "rmse": 0.043270502937001756,
+        "boundary": false,
+        "predictions": [
+          0.9981661951321024,
+          4.058824201175149,
+          7.941704240363703,
+          9.025045970173332
+        ],
+        "leave_one_batch_out_mae": 0.13350620046619285,
+        "last_batch_forward_prediction": 9.285790559600633
+      }
+    },
+    "continuous_allow_decreasing_cost": {
+      "all": {
+        "k": 0.18107364273192833,
+        "q": 1.1985034371107206,
+        "scale": 4.906309205830461,
+        "rmse": 0.0681742614310351,
+        "boundary": false,
+        "predictions": [
+          3.9983387861616206,
+          0.9728900912799314,
+          4.109456059692038,
+          7.904497902497761,
+          9.037412072857224
+        ],
+        "leave_one_batch_out_mae": 0.11085862362583794,
+        "last_batch_forward_prediction": 9.226872840854016
+      },
+      "last_four": {
+        "k": 0.18125400535016917,
+        "q": 1.198719621823843,
+        "scale": 4.904130262088771,
+        "rmse": 0.0762114858297636,
+        "boundary": false,
+        "predictions": [
+          0.9725200636399247,
+          4.108235330019373,
+          7.903517522447481,
+          9.038129519379245
+        ],
+        "leave_one_batch_out_mae": 0.2395636911833582,
+        "last_batch_forward_prediction": 9.505184283043347
+      }
+    },
+    "discrete_allow_decreasing_cost": {
+      "all": {
+        "k": 0.17859877054106071,
+        "q": 1.1955409616696935,
+        "scale": 5.373012731828592,
+        "rmse": 0.03887770344974993,
+        "boundary": false,
+        "predictions": [
+          3.9943633132175242,
+          0.999380368120156,
+          4.063099548561318,
+          7.944941032348899,
+          9.022631394093958
+        ],
+        "leave_one_batch_out_mae": 0.06278514392829268,
+        "last_batch_forward_prediction": 9.129426264520987
+      },
+      "last_four": {
+        "k": 0.17920714164515228,
+        "q": 1.196268515533465,
+        "scale": 5.366484928670775,
+        "rmse": 0.043270502937003734,
+        "boundary": false,
+        "predictions": [
+          0.9981661967328019,
+          4.058824206699547,
+          7.941704243542534,
+          9.025045964714561
+        ],
+        "leave_one_batch_out_mae": 0.13350620140818925,
+        "last_batch_forward_prediction": 9.285790564139333
+      }
+    }
+  },
+  "production_personal_fit": {
+    "status": "personalReady",
+    "points": [
+      [
+        0,
+        74,
+        42.23
+      ],
+      [
+        4,
+        75,
+        26.02
+      ],
+      [
+        5,
+        75,
+        44.62
+      ],
+      [
+        9,
+        76,
+        16.93
+      ],
+      [
+        17,
+        77,
+        33.97
+      ],
+      [
+        26,
+        78,
+        43.04
+      ]
+    ],
+    "model": {
+      "a": 24.598631568064775,
+      "k": 0.17945849616157983,
+      "error": 0.00253187685309462
+    },
+    "forecastEnd": 80,
+    "year": "2026"
+  }
+}
